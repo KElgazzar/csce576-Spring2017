@@ -1,0 +1,210 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:weightSum="3">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.25"
+        android:padding="5dp"
+        android:background="#66a39c"
+        android:layout_marginBottom="3dp"
+        android:clickable="false"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:id="@+id/txt_adv"
+            android:text="BACK"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:clickable="true"
+            android:paddingLeft="2dp"/>
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="Advanced Search Near Your Place"
+            android:layout_width="0dp"
+            android:layout_weight="1.75"
+            android:layout_height="match_parent"
+            android:textColor="#000000"/>
+
+
+
+    </LinearLayout>
+    <fragment android:id="@+id/map"
+        android:layout_weight="1.75"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.15"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="#ffffff"
+        android:weightSum="3">
+        <TextView
+            android:id="@+id/txt_filter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.5"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:text="Add Filter"
+            android:gravity="center"
+            android:background="#9ab5e0"
+            android:textColor="#000000">
+        </TextView>
+        <TextView
+            android:id="@+id/txt_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1.5"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:gravity="center"
+            android:text="Search"
+            android:enabled="false"
+            android:background="#9ab5e0"
+            android:textColor="#000000">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.85"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+
+        android:background="#ffffff"
+        android:weightSum="3" >
+
+        <TextView
+            android:id="@+id/txt_filter_header"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:text="Filters Applied"
+            android:background="#9ab5e0"
+            android:textSize="16sp"
+            android:textColor="#000000">
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+            android:layout_weight="0.3"
+            android:orientation="horizontal"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="12sp"
+
+                android:textColor="#000000"
+                android:text="Establishment Types"
+                android:id="@+id/tv_est_fil_list_header"
+                android:layout_marginLeft="1dp">
+
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="Cuisine Types"
+                android:id="@+id/tv_cuisines_filter_list_header"
+                android:layout_marginLeft="1dp">
+
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="2"
+            android:layout_weight="2.4"
+            android:orientation="horizontal"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp">
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/est_fil_list"
+                    android:layout_marginRight="1dp"
+                    android:paddingLeft="2dp">
+
+                </ListView>
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp">
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/cuisines_filter_list"
+                    android:layout_marginLeft="1dp">
+
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="5"
+    android:id="@+id/layout_cuisine_tick">
+
+
+        <TextView
+                android:id="@+id/tv_cuisinename"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3.5"
+                android:gravity="left|center_vertical"
+                android:layout_gravity="left|center_vertical"
+                android:textColor="#000000"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+                android:textSize="16sp" />
+        <LinearLayout
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/cuisine_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/green_tick"/>
+
+        </LinearLayout>
+
+
+    <!--<LinearLayout
+        android:id="@+id/layout_cuisine_tick_unchecked"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="#6d83a8"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/cuisine_tick_unchecked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_tick"/>
+    </LinearLayout>-->
+
+
+
+
+</LinearLayout>
